@@ -1,0 +1,25 @@
+<div class="top">todos</div>
+<div class="content">
+
+  <div class="text-input separate">
+    <button (click)="allComplete()">👇</button>
+    <input style="margin-left: 5px;" placeholder="What's need todo down !" [(ngModel)]="inputValue" (keyup.enter)="addItem()"/>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <div class="separate" *ngIf="listsFlag">
+    <span>{{activedCount}} items left</span>
+    <button style="margin-left: 100px" [class.button-active]="tab==='all'" [routerLink]="['/show-list','all']" >All</button>
+    <button style="margin-left: 5px"  [class.button-active]="tab==='actived'" routerLink="/show-list/actived" >Actived</button>
+    <button style="margin-left: 5px"  [class.button-active]="tab==='completed'" routerLink="/show-list/completed" >Completed</button>
+    <button style="margin-left: 5px" (click)="clearAllComplete()" *ngIf="clearFlag">clear complete</button>
+  </div>
+  
+</div>
+
+<div class="buttom-tip">
+  <p>Double-click to edit a todo</p>
+  <p>Written by Evan You</p>
+  <p>Part of TodoMVC</p>
+</div>

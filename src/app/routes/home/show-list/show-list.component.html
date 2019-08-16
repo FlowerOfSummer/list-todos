@@ -1,0 +1,17 @@
+
+<div class="separate">
+    <ul>
+      <li  *ngFor = "let item of showLists" [class.Completed-list]="item.completedFlag === true">
+
+        <label>
+          <span class="ant-checkbox ant-checkbox-checked"> 
+            <input type="checkbox" class="ant-checkbox-input" value="" name=""  (click)="ifChecked($event,item)" [checked]="item.completedFlag"/>
+            <span class="ant-checkbox-inner" style="color:rgb(113, 212, 196)"></span>
+          </span>
+
+          <input name="nickName" type="text" value="{{item.name}}" class="change-text" [readonly] = "!item.canEdit" [class.chanage-name]="item.canEdit" (dblclick)="changeEvent(item)" (keyup.enter)="changeName($event,item)">
+      </label> 
+        <span class="clearButton" (click)="deleteItem(item.id)">×</span>
+      </li>
+    </ul>
+</div>

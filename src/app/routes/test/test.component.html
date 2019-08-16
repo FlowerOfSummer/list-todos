@@ -1,0 +1,10 @@
+<p>
+    <button (click)="emissionDataToChild()">发射数据给子组件</button>
+  </p>
+  <ul>
+    <li *ngFor="let data of dataFromChild">{{data}}</li>
+  </ul>
+  <fieldset>
+    <legend>子组件部分：</legend>
+    <app-child></app-child>
+  </fieldset>

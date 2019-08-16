@@ -1,0 +1,128 @@
+body {
+    display: block;
+    background-color: rgb(235, 232, 232) !important;
+}
+
+::selection {
+    background: none;
+}
+::-moz-selection {
+    background: none;
+}
+.top {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 100px;
+    font-family: "华文彩云";
+    color: #9c6363;
+}
+
+.buttom-tip {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    color: #949393;
+}
+.content {
+    width: 500px;
+    margin: auto;
+    /* margin-top: 100px; */
+    /* text-align: center; */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #7c7070;
+    /* border-radius: 10px; */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2),
+                1px 8px 0 -3px #f6f6f6, 
+                0 9px 1px -3px rgba(0, 0, 0, 0.2), 
+                0 16px 0 -6px #f6f6f6, 
+                0 17px 2px -6px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    
+}
+
+
+.text-input {
+    border-radius: 10px;
+}
+.text-input input {
+    width: 80%;
+    height: 35px;
+    font-size: 20px;
+    border: #fff;
+    text-indent: 20px;
+    color: #7c7070;
+    
+}
+
+.text-input input::-webkit-input-placeholder { /* WebKit browsers */ font-style: italic; color: #bdbaba}
+.text-input input::-moz-placeholder { /* WebKit browsers */ font-style: italic; color: #bdbaba}
+.text-input input::-ms-input-placeholder { /* WebKit browsers */ font-style: italic; color: #bdbaba}
+
+.text-input input:focus{
+    outline: none !important;
+}
+.separate {
+    margin: 10px 10px 0px 10px;
+    padding: 5px;
+    
+}
+.separate:first-of-type {
+    margin: 10 0px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+/* .separate:nth-last-of-type(2) {
+    margin: 0 0 10px 0;
+    padding: 0;
+} */
+.separate span label {
+    content: '❯';
+    font-size: 22px;
+    color: #e6e6e6;
+    padding: 10px 27px 10px 27px;
+}
+li {
+    list-style: none !important;
+    cursor: pointer;
+    margin: 2px 5px;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+}
+ul {
+    margin: 0;
+    padding-inline-start: 2px;
+}
+.Completed-list input {
+    text-decoration:line-through;
+    color: rgb(219, 213, 213);
+}
+.Completed-list label .ant-checkbox .ant-checkbox-inner::after{
+    content: '✔';
+}
+
+li:hover .clearButton {
+    display: inline-block;
+    color: red;
+}
+.clearButton {
+    float: right;
+    font-size: 26px;
+    margin-right: 10px;
+    display: none;
+}
+button {
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    color: #7c7070;
+}
+button:focus {
+    outline: none !important;
+}
+button:active {
+    border: none;
+}
+.button-active {
+    border: 1px solid #6cc1f3;
+}
