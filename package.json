@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prebuild:docs": "rm -rfv ./docs",
+    "build:docs": "ng build --base-href=/list-todos && mv ./dist/test ./docs",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
